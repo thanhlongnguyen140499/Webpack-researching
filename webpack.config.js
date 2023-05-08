@@ -10,6 +10,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[contenthash].js",
     clean: true,
+    assetModuleFilename: "[name][ext]",
   },
   devtool: "source-map",
   devServer: {
@@ -23,6 +24,7 @@ module.exports = {
     historyApiFallback: true,
   },
   module: {
+    // config loaders
     rules: [
       {
         test: /\.scss$/,
@@ -38,6 +40,10 @@ module.exports = {
             plugins: ["@babel/plugin-proposal-class-properties"],
           },
         },
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
       },
     ],
   },
