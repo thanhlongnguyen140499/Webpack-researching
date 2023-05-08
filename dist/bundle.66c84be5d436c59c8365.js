@@ -15,7 +15,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/lib/axios.js");
 
 function generateJoke() {
-  // return "I don't trust stairs. They're always up to something";
   const config = {
     headers: {
       Accept: "application/json"
@@ -4666,9 +4665,11 @@ __webpack_require__.r(__webpack_exports__);
 
 const qrCodeImg = document.getElementById("qrCodeImg");
 qrCodeImg.src = _assets_householder_png__WEBPACK_IMPORTED_MODULE_2__;
-console.log(_generateJoke__WEBPACK_IMPORTED_MODULE_0__["default"]);
+const jokeBtn = document.getElementById("jokeBtn");
+jokeBtn.addEventListener("click", _generateJoke__WEBPACK_IMPORTED_MODULE_0__["default"]);
+(0,_generateJoke__WEBPACK_IMPORTED_MODULE_0__["default"])();
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.c33e5a49a6b848d60b96.js.map
+//# sourceMappingURL=bundle.66c84be5d436c59c8365.js.map
