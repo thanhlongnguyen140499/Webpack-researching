@@ -8,7 +8,17 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].js",
+    filename: "[name].[contenthash].js",
+  },
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, "dist"),
+    },
+    port: 3000,
+    open: true, // autumatically open browser
+    hot: true, // Hot reload
+    compress: true, // enable compress
+    historyApiFallback: true,
   },
   module: {
     rules: [
@@ -22,7 +32,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "Webpack App",
       filename: "index.html",
-      template: 'src/template.html'
+      template: "src/template.html",
     }),
   ],
 };
