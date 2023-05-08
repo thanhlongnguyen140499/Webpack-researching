@@ -5,4 +5,7 @@ import qrCode from "./assets/householder.png";
 const qrCodeImg = document.getElementById("qrCodeImg");
 qrCodeImg.src = qrCode;
 
-console.log(generateJoke);
+const jokeBtn = document.getElementById("jokeBtn");
+jokeBtn.addEventListener("click", generateJoke);
+
+generateJoke()
